@@ -1,5 +1,6 @@
-import React from 'react';
-import './Question.css'
+import React, { useState } from 'react';
+
+import './Question.css';
 
 const partnerQuestions = [
     {
@@ -34,10 +35,36 @@ const partnerQuestions = [
     }
 ]
 
-const Question = (props) => (
-    <div className='question-text'>
-        {partnerQuestions[0].questionText}
-    </div>
-);
+const Question = (props) => {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+
+    const handleAnswerButtonClick = () => {
+        const nextQuestion = currentQuestion + 1;
+        setCurrentQuestion(nextQuestion);
+
+        if (nextQuestion < partnerQuestions.length) {
+            setCurrentQuestion(nextQuestion);
+        } else {
+            alert('you are at the end');
+        }
+    }
+    return (
+    <>
+        <h1>Are you mad at me because ....</h1>
+        <div className='question-text'>
+            {partnerQuestions[currentQuestion].questionText}?
+        </div>
+        <div className="answer-section">
+            <form action='#'>
+                <input type="radio" name="mad" value="true" />
+                    <label for="true">Yes</label>
+                <input type="radio" name="mad" value="false" />
+                    <label for="false">No</label><br />
+                <input type="submit" value="submit" onClick={() => handleAnswerButtonClick()}/>
+            </form>   
+        </div> 
+    </>
+    )
+};
 
 export default Question;
