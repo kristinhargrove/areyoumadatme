@@ -8,6 +8,8 @@ import ResultsPage from './components/ResultsPage';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
+
+
 function App() {
   return (
     <>
