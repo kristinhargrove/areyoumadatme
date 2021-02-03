@@ -1,5 +1,4 @@
 import React from 'react';
-import Output from '../containers/OutputContainer';
 
 const ResultsPage = props => (
     <div>
