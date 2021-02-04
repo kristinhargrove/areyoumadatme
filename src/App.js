@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Question from './containers/Question'
 import OutputContainer from './containers/OutputContainer';
+import Results from './containers/Results';
 
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -18,6 +19,7 @@ function App() {
         <Main />
         <Question />
         <OutputContainer />
+        <Results />
       </Provider>
     </>
   );
