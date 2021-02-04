@@ -1,6 +1,6 @@
 export const INCREMENT = 'increment';
 export const DECREMENT = 'decrement';
-export const FETCH_QUESTIONS = "fetch_questions";
+export const INCREMENT_QUESTIONS = "increment_questions"
 
 export function actionIncrement() {
     return {
@@ -14,8 +14,8 @@ export function actionDecrement() {
     };
 }
 
-export function fetchQuestions() {
+export function actionIncrementQuestions() {
     return {
-        type: FETCH_QUESTIONS
+        type: INCREMENT_QUESTIONS
     }
 }
