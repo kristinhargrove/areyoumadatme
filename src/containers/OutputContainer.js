@@ -1,10 +1,8 @@
 import Output from '../components/Output';
 import { connect } from 'react-redux';
 
-function mapStateToProps(state) {
-
+function mapStateToProps(state) { //passes state to react
     return {
-        // propName seen by React : value-in-state
         amount: state.count
     }
 }
