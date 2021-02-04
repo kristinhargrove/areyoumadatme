@@ -1,22 +1,22 @@
 import {
     INCREMENT,
     DECREMENT,
-    FETCH_QUESTIONS
+    INCREMENT_QUESTIONS
 } from './actions';
 
 export function counter(state, action) {
     switch(action.type) {
-        case FETCH_QUESTIONS: 
+        case INCREMENT_QUESTIONS:
             return {
-                partnerQuestions: state.partnerQuestions
+                ...state, questionCount: state.questionCount + 1
             }
         case INCREMENT: 
             return {
-                count: state.count + 1
+                ...state, count: state.count + 1
             }
         case DECREMENT: {
             return {
-                count: state.count - 1
+                ...state, count: state.count - 1
             }
         }
         default:

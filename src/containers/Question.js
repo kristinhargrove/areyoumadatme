@@ -1,12 +1,29 @@
 import Question from '../components/Question';
 import { connect } from 'react-redux';
 
+import { actionIncrement, actionIncrementQuestions } from '../actions';
+
 function mapStateToProps(state) {
 
     return {
         // propName seen by React : value-in-state
-        partnerQuestions: state.partnerQuestions
+        partnerQuestions: state.partnerQuestions,
+        questionCount: state.questionCount
+
     }
 }
 
-export default connect(mapStateToProps)(Question);
+function mapDispatchToProps(dispatch) {
+    return {
+        handleYesClick: () => {
+            dispatch(actionIncrement());
+            dispatch(actionIncrementQuestions());
+        },
+
+        handleNoClick: () => {
+            dispatch(actionIncrementQuestions());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Question);
