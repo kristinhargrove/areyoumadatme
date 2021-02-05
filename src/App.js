@@ -4,6 +4,7 @@ import theme from './theme'
 
 import Header from './components/Header';
 import Main from './components/Main';
+import About from './components/About';
 import Question from './containers/Question'
 import Results from './containers/Results';
 
