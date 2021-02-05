@@ -1,6 +1,10 @@
 import React from 'react';
-
 import './Main.css'
+
+import {
+    Link
+} from 'react-router-dom';
+
 const Main = (props) => (
     <>
         <body className="main">
@@ -13,7 +17,7 @@ const Main = (props) => (
             <p>
                 If they are mad at you, we'll ask them to dinner or to hang out with you, on your behalf. We won't be paying for dinner though, sorry.
             </p>
-            <button className="start">Start</button>
+            <Link to='/quiz'><button className="start">Start</button></Link>
         </body>
     </>
 );

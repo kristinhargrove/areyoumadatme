@@ -1,12 +1,15 @@
 import React from 'react';
-
 import './Header.css'
 
-const Header = (props) => (
+import {
+    Link
+} from 'react-router-dom';
+
+const Header = () => (
     <nav>
-        <a className="nav-item" href="#">faqs</a>
-        <a className="nav-item" href="#">about</a>
-        <a className="nav-item" href="#">home</a>
+        <Link to='/'>home</Link>
+        <Link to='/about'>about</Link>
+        <Link to='/quiz'>quiz</Link>
     </nav>
 )
 

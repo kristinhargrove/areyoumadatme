@@ -11,18 +11,29 @@ import { store } from './store';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
     <Provider store={store}>
-        <Header />
-        <Main />
-        <Question />
-        <OutputContainer />
-        <Results />
+      <Header /> 
+      <Switch>
+          <Route exact path='/'>
+            <Main />
+          </Route>
+          <Route path='/quiz'>
+            <Question />
+          </Route>
+          <Route>
+            <Results path='/results' />
+          </Route>
+          <Route path="*">
+            <Redirect to='/' />
+          </Route>
+        </Switch>
     </Provider>
     </Router>
   );

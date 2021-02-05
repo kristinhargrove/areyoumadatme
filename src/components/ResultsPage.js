@@ -2,7 +2,6 @@ import React from 'react';
 
 const ResultsPage = props => {
     let results = '';
-    console.log(props.amount);
 
     if (props.amount < 5) {
         results =
