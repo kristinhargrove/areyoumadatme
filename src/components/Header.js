@@ -1,16 +1,17 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 
 import {
     Link
 } from 'react-router-dom';
 
 const Header = () => (
-    <nav>
-        <Link to='/'>home</Link>
-        <Link to='/about'>about</Link>
-        <Link to='/quiz'>quiz</Link>
-    </nav>
+    <Breadcrumbs aria-label="breadcrumb">
+        <Link color="inherit" to='/'>home</Link>
+        <Link color="inherit" to='/about'>about</Link>
+        <Link color="textPrimary" to='/quiz'>quiz</Link>
+    </Breadcrumbs>
 )
 
 export default Header;
