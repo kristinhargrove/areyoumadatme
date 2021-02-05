@@ -1,4 +1,6 @@
-import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from './theme'
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -19,6 +21,8 @@ function App() {
   return (
     <Router>
     <Provider store={store}>
+    <ThemeProvider theme = {theme}>
+    <CssBaseline />
       <Header /> 
       <Switch>
           <Route exact path='/'>
@@ -34,6 +38,7 @@ function App() {
             <Redirect to='/' />
           </Route>
         </Switch>
+    </ThemeProvider>
     </Provider>
     </Router>
   );
