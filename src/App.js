@@ -8,20 +8,23 @@ import Results from './containers/Results';
 
 import { Provider } from 'react-redux';
 import { store } from './store';
-
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <Provider store={store}>
+    <Router>
+    <Provider store={store}>
         <Header />
         <Main />
         <Question />
         <OutputContainer />
         <Results />
-      </Provider>
-    </>
+    </Provider>
+    </Router>
   );
 }
 
