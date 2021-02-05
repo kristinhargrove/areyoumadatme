@@ -5,7 +5,6 @@ import theme from './theme'
 import Header from './components/Header';
 import Main from './components/Main';
 import Question from './containers/Question'
-import OutputContainer from './containers/OutputContainer';
 import Results from './containers/Results';
 
 import { Provider } from 'react-redux';
@@ -27,6 +26,9 @@ function App() {
       <Switch>
           <Route exact path='/'>
             <Main />
+          </Route>
+          <Route path = '/about'>
+            <About />
           </Route>
           <Route path='/quiz'>
             <Question />
