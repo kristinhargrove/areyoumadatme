@@ -11,15 +11,16 @@ import { store } from './store';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
     <Provider store={store}>
+      <Header /> 
       <Switch>
-          {/* <Header /> */}
           <Route exact path='/'>
             <Main />
           </Route>
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route>
             <Results path='/results' />
+          </Route>
+          <Route path="*">
+            <Redirect to='/' />
           </Route>
         </Switch>
     </Provider>
