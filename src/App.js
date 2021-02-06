@@ -1,10 +1,9 @@
-import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import theme from './theme'
 
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
+import WelcomePage from './components/WelcomePage';
 import Question from './containers/Question'
 import Results from './containers/Results';
 
@@ -18,6 +17,7 @@ import {
 } from 'react-router-dom';
 
 function App() {
+
   return (
     <Router>
     <Provider store={store}>
@@ -29,6 +29,9 @@ function App() {
           </Route>
           <Route path = '/about'>
             <About />
+          </Route>
+          <Route path = '/welcomepage/:username/:sender_name'>
+            <WelcomePage />
           </Route>
           <Route path='/quiz'>
             <Question />
