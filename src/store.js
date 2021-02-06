@@ -5,7 +5,7 @@ const partnerQuestions = [
   'you are hangry',
   'you are sleepy',
   'I said your arms are "weirdly long"',
-  'I was signing Celine Dion at the top of my lungs during your meeting',
+  'I was singing Celine Dion at the top of my lungs during your meeting',
   'I ate your leftovers',
   'I said the actor in Bridgerton is super hot',
   'you are being moody',
