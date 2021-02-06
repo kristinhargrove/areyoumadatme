@@ -1,11 +1,10 @@
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from './theme'
+// import theme from './theme'
 
 import Header from './components/Header';
 import Main from './components/Main';
 import Question from './containers/Question'
-import OutputContainer from './containers/OutputContainer';
 import Results from './containers/Results';
 
 import { Provider } from 'react-redux';
@@ -21,7 +20,6 @@ function App() {
   return (
     <Router>
     <Provider store={store}>
-    <ThemeProvider theme = {theme}>
     <CssBaseline />
       <Header /> 
       <Switch>
@@ -38,7 +36,6 @@ function App() {
             <Redirect to='/' />
           </Route>
         </Switch>
-    </ThemeProvider>
     </Provider>
     </Router>
   );

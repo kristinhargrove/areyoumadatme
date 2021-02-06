@@ -1,38 +1,39 @@
 import React from 'react';
 
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+
 const ResultsPage = props => {
     let results = '';
 
     if (props.amount < 5) {
         results =
-            <div>
-                <p>
-                    A message from your SO: <br />
-                    You are not mad. Go give your SO a hug!
-                </p>
-            </div>
+        <>
+            You don't seem very mad. Let's hang out!
+        </>
     } else if (props.amount > 5) {
         results =
-            <div> 
-                <p>
-                    A message from your SO:<br />
-                    You not really mad, you're probably just a little annoyed. Go buy a latte and calm down.
-                </p>
-            </div>
+            <>
+                Wow, you are really mad at me. Sorry I made you mad. Will you go get dinner with me?
+            </>
     } else {
         results = 
-            <div>
-                <p>
-                    A message from your SO:<br />
-                    WOW, you are mad. Sorry I made you mad. Do you want to go get margs with me?
-                </p>
-            </div>
+            <>
+                Take the quiz again, we're not sure.
+            </>
     }
 
     return (
-        <div className = 'results'>
-            {results}
-        </div>
+        <Container maxWidth='md' align='center'>
+            <Typography variant='h4'>
+                A message from your significant other:
+            </Typography>
+        <br />
+            <Typography variant = 'h6'>
+                {results}   
+            </Typography>
+        </Container>
     )
 }
 
