@@ -11,7 +11,8 @@ const partnerQuestions = [
   'you are being moody',
   'I beat you at ping pong that one time',
   'I refuse to do dishes',
-  'I have been wearing your sweatshirt for the past two weeks'
+  'I have been wearing your sweatshirt for the past two weeks',
+  'I said McDonalds is not "real food"'
 ]
 
 //redux 
