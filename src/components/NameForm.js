@@ -7,7 +7,7 @@ class NameForm extends React.Component {
         this.state = {
             username: '',
             sendername:'',
-            serverResponse: null
+            link: 'https://areyoumad.netlify.app/welcomepage'
         }
     }
 
@@ -20,11 +20,10 @@ class NameForm extends React.Component {
     }
 
     generateLink = () => {
-        let link = 'https://areyoumad.netlify.app/welcomepage';
-
-        link = link + '/' + this.state.username + '/' + this.state.sendername;
-        console.log(link); 
-        return link;
+        this.setState({
+            link: this.state.link + '/' + this.state.username + '/' + this.state.sendername
+        })
+        console.log(this.state.link);
     }
 
     render() {
@@ -51,7 +50,11 @@ class NameForm extends React.Component {
                     onClick={this.generateLink}
                 />
                 <div>
-                    {this.state.username && this.generateLink}
+                <br />
+                    Send this link to the person that you think is mad at you:
+                    <br />
+                    <a href={this.state.link}>{this.state.link}</a>
+                    
                 </div>
             </Container>
         );
