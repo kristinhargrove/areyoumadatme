@@ -31,7 +31,7 @@ const About = () => {
                 Kristin is a full stack developer and mortgage expert.<br /><br />
                 When she's not helping people buy houses or making websites, she likes to read, play games, play sports (right now, she loves Pickleball), and cook. 
                 <br /><br />
-                She wants to thank her ex-roommate, Laura, and her boyfriend, Spencer, for inspiring her to make this quiz. She is sorry for all the times she made them mad. Sometimes, she just doesn't want to do the dishes (okay, fine, most of the time).
+                She wants to thank her boyfriend, Spencer, for inspiring her to make this quiz. She is sorry for all the times she made them mad. Sometimes, she just doesn't want to do the dishes (okay, fine, most of the time).
             </Typography>
         </Container>
         </>
