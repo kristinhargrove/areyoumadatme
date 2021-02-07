@@ -3,12 +3,12 @@ import { useParams } from "react-router";
 
 
 const WelcomePage = () => {
-    let { username, senderName } = useParams();
+    let { username, sender_name } = useParams();
 
     return (
         <div>
            HELLO {username}...
-           <div>Your sexy friend {senderName} wants you to take a quiz</div>
+           <div>Your sexy friend {sender_name} wants you to take a quiz</div>
         </div>
     )
 }
