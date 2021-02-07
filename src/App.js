@@ -30,7 +30,7 @@ function App() {
           <Route path = '/about'>
             <About />
           </Route>
-          <Route path = '/welcomepage/:username/:sender_name'>
+          <Route path = '/welcomepage/:username/:sendername'>
             <WelcomePage />
           </Route>
           <Route path='/quiz'>

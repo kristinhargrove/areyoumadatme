@@ -6,7 +6,7 @@ class NameForm extends React.Component {
         super(props);
         this.state = {
             username: '',
-            sender_name:'',
+            sendername:'',
             serverResponse: null
         }
     }
@@ -22,7 +22,7 @@ class NameForm extends React.Component {
     generateLink = () => {
         let link = 'https://areyoumad.netlify.app/welcomepage';
 
-        link = link + '/' + this.state.username + '/' + this.state.sender_name;
+        link = link + '/' + this.state.username + '/' + this.state.sendername;
         console.log(link); 
         return link;
     }
@@ -33,9 +33,9 @@ class NameForm extends React.Component {
                 <h1>Enter your name:</h1>
                 <input 
                     type= 'text'
-                    value={this.state.sender_name}
+                    value={this.state.sendername}
                     onChange={(event) => {
-                        this._updateField('sender_name', event.target.value)
+                        this._updateField('sendername', event.target.value)
                     }}
                 />
                 <h1>Enter your friend or significant others name:</h1>
