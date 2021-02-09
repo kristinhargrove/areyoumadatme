@@ -31,9 +31,7 @@ class NameForm extends React.Component {
     render() {
         return (
             <Container maxWidth='lg' align='center'>
-                <Typography variant="h6">
-                    Enter your name:
-                </Typography>
+                Enter your name: <br />  
                 <input 
                     type= 'text'
                     value={this.state.sendername}
@@ -42,7 +40,7 @@ class NameForm extends React.Component {
                     }}
                 />
                 <br /><br />
-                <Typography variant="h6">Enter your friend or significant others name:</Typography>
+                Enter your friend or significant others name: <br />
                 <input 
                     type= 'text'
                     value={this.state.username}
@@ -51,10 +49,12 @@ class NameForm extends React.Component {
                     }}
                 />
                 <br /><br />
-                <input 
-                    type='submit'
+                <Button
+                    variant="outlined"
+                    size="large"
                     onClick={this.generateLink}
-                />
+                >Get Link
+                </Button>
                 <br /><br />
                 <div>
                     <Typography variant="subtitle1">
