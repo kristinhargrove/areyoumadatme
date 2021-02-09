@@ -32,8 +32,8 @@ class Main extends React.Component {
                         <br />
                         DISCLAIMER: We won't be paying for dinner though, sorry.
                     <br /><br />
-                    <NameForm />
                     <Link to='/quiz'><Button variant="contained" size='large'>Start</Button></Link>
+                    <NameForm />
                 </Typography>
             </Container>
     </>
