@@ -24,9 +24,9 @@ class Main extends React.Component {
                         mad at me?
                     </Typography>
                     <br />
-                        Are you mad at me is a fun and simple assessment to figure out if your significant other, friend or family are mad at you. 
-                        With COVID, we are spending A LOT of time with the people we care about, so it makes sense why someone might be mad at you.
-                        Simply send them the quiz and you will get the results sent back to you.
+                        Are you mad at me is a fun way to figure out if that person you think is mad at you is actually mad. 
+                        <br />
+                        Fill out your name, their name, and send them the link to the quiz.
                         <br /><br />
                         If they are mad at you, we'll ask them to dinner or to hang out with you, on your behalf. 
                         <br />
