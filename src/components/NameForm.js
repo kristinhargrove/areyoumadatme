@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 class NameForm extends React.Component {
@@ -29,7 +31,9 @@ class NameForm extends React.Component {
     render() {
         return (
             <Container maxWidth='lg' align='center'>
-                <h1>Enter your name:</h1>
+                <Typography variant="h6">
+                    Enter your name:
+                </Typography>
                 <input 
                     type= 'text'
                     value={this.state.sendername}
@@ -37,7 +41,8 @@ class NameForm extends React.Component {
                         this._updateField('sendername', event.target.value)
                     }}
                 />
-                <h1>Enter your friend or significant others name:</h1>
+                <br /><br />
+                <Typography variant="h6">Enter your friend or significant others name:</Typography>
                 <input 
                     type= 'text'
                     value={this.state.username}
@@ -45,17 +50,21 @@ class NameForm extends React.Component {
                         this._updateField('username', event.target.value)
                     }}
                 />
+                <br /><br />
                 <input 
                     type='submit'
                     onClick={this.generateLink}
                 />
+                <br /><br />
                 <div>
-                <br />
+                    <Typography variant="subtitle1">
                     Send this link to the person that you think is mad at you:
+                    </Typography>
                     <br />
                     <a href={this.state.link}>{this.state.link}</a>
                     
                 </div>
+            <br /><br /><br />
             </Container>
         );
     }
