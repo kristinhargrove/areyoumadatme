@@ -40,7 +40,8 @@ const WelcomePage = () => {
             </Typography>
             <br />
         <div className={classes.root}>
-            <Link to='/quiz'><Button variant="outlined" size="large" align="center">Start</Button></Link>
+            <Link to='/quiz'><Button variant="outlined" size="large" align="center">Start Partner Quiz</Button></Link>
+            <Link to='/friendQuiz'><Button variant="outlined" size="large" align="center">Start Friend Quiz</Button></Link>
         </div>
         </Container>
     )

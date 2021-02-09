@@ -27,7 +27,7 @@ const ResultsPage = props => {
     return (
         <Container maxWidth='md' align='center'>
             <Typography variant='h4'>
-                A message from your significant other:
+                A message from the person who sent you this quiz:
             </Typography>
         <br />
             <Typography variant = 'h6'>

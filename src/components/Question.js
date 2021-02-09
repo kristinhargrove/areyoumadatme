@@ -26,20 +26,12 @@ const Question = (props) => {
     if (props.questionCount < props.partnerQuestions.length) {
         currentQuestion = <>{props.partnerQuestions[props.questionCount]}?</>
     } else {
-       showResults = <Link to='/results'><Button variant='contained'>Submit Quiz</Button></Link>
+       showResults = <Link to='/results'><Button variant='outlined'>See Results</Button></Link>
     }
     
     return (
     <Container maxWidth='md' align='center'>
-        <Typography variant='h4'>
-            Are you mad at me because ...
-        </Typography>
-        <br />
-        <Typography 
-            variant='h6'
-         >
-            {!isQuizOver && currentQuestion }
-        </Typography>
+        {!isQuizOver && <><Typography variant='h4'>Are you mad at me because ...</Typography><br /><Typography variant='h6'> {currentQuestion}</Typography></>}
         <br />
         <div className={classes.root}>
             {!isQuizOver && <Button 
