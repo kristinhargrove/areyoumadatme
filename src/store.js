@@ -15,12 +15,26 @@ const partnerQuestions = [
   'I said McDonalds is not "real food"'
 ]
 
+const friendQuestions = [
+  'you are hangry',
+  'you are sleepy',
+  'I ate your food',
+  'I drank your liquor',
+  'I do all my zoom meetings in the common area',
+  'I said your new pants were "reminded me of my grandma',
+  'I still have that one shirt of yours',
+  'I wore shoes in the house after you specifically asked me not to',
+  'I said you looked like a ghost',
+  'you are on your period',
+]
+
 //redux 
 
 const defaultState = {
   count: 0,
   partnerQuestions,
-  questionCount: 0
+  friendQuestions,
+  questionCount: 0,
 };
 
 export const store = createStore(counter, defaultState);

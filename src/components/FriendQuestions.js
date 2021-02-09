@@ -16,22 +16,22 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const Question = (props) => {
+const FriendQuestions = (props) => {
     const classes = useStyles();
 
     let currentQuestion = '';
     let showResults = '';
-    let isQuizOver = props.questionCount === props.partnerQuestions.length;
+    let isQuizOver = props.questionCount === props.friendQuestions.length;
 
-    if (props.questionCount < props.partnerQuestions.length) {
-        currentQuestion = <>{props.partnerQuestions[props.questionCount]}?</>
+    if (props.questionCount < props.friendQuestions.length) {
+        currentQuestion = <>{props.friendQuestions[props.questionCount]}?</>
     } else {
        showResults = <Link to='/results'><Button variant='outlined'>See Results</Button></Link>
     }
     
     return (
     <Container maxWidth='md' align='center'>
-        {!isQuizOver && <><Typography variant='h4'>Are you mad at me because ...</Typography><br /><Typography variant='h6'> {currentQuestion}</Typography></>}
+            {!isQuizOver && <><Typography variant='h4'>Are you mad at me because ...</Typography><br /><Typography variant='h6'> {currentQuestion}</Typography></>}
         <br />
         <div className={classes.root}>
             {!isQuizOver && <Button 
@@ -43,4 +43,4 @@ const Question = (props) => {
     )
 };
 
-export default Question;
+export default FriendQuestions;

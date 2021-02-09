@@ -14,6 +14,7 @@ const Header = () => (
             <Link color="inherit" to='/about'>about</Link>
             <Link color="textPrimary" to='/quiz'>quiz</Link>
         </Breadcrumbs>
+        <br/><br/>
     </>
 )
 

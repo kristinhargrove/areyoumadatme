@@ -16,24 +16,19 @@ class NameForm extends React.Component {
     _updateField = (field, val) => {
         this.setState({
             [field]: val
-        }, () => {
-            console.log(`${field} is now ${val}`) ;
-        });
+        })
     }
 
     generateLink = () => {
         this.setState({
             link: this.state.link + '/' + this.state.username + '/' + this.state.sendername
         })
-        console.log(this.state.link);
     }
 
     render() {
         return (
             <Container maxWidth='lg' align='center'>
-                <Typography variant="h6">
-                    Enter your name:
-                </Typography>
+                <b>Enter your name:</b> <br />  
                 <input 
                     type= 'text'
                     value={this.state.sendername}
@@ -42,7 +37,7 @@ class NameForm extends React.Component {
                     }}
                 />
                 <br /><br />
-                <Typography variant="h6">Enter your friend or significant others name:</Typography>
+                <b>Enter your friend or significant others name:</b> <br />
                 <input 
                     type= 'text'
                     value={this.state.username}
@@ -51,14 +46,16 @@ class NameForm extends React.Component {
                     }}
                 />
                 <br /><br />
-                <input 
-                    type='submit'
+                <Button
+                    variant="outlined"
+                    size="large"
                     onClick={this.generateLink}
-                />
+                >Get Link
+                </Button>
                 <br /><br />
                 <div>
                     <Typography variant="subtitle1">
-                    Send this link to the person that you think is mad at you:
+                    <b>Send this link to the person that you think is mad at you:</b>
                     </Typography>
                     <br />
                     <a href={this.state.link}>{this.state.link}</a>

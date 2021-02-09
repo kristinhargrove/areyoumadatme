@@ -4,7 +4,8 @@ import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
 import WelcomePage from './components/WelcomePage';
-import Question from './containers/Question'
+import Question from './containers/Question';
+import FriendQuestions from './containers/FriendQuestions';
 import Results from './containers/Results';
 
 import { Provider } from 'react-redux';
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path='/quiz'>
             <Question />
+          </Route>
+          <Route path='/friendquiz'>
+            <FriendQuestions />
           </Route>
           <Route>
             <Results path='/results' />
