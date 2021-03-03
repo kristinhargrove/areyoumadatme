@@ -26,7 +26,7 @@ A fun way to figure out if the person who you think is mad at you is actually ma
 
 ## Shoutouts
 
-Thank you to my boyfriend and friends for inspiring this quiz. I am sorry for all the times I made you mad! 
+Thank you to my boyfriend and friends for inspiring this quiz. I am sorry for all the times I made you mad...<br>
 *All questions inspired by real life situations.
 
 ## App site
