@@ -1,9 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 
-import "../App.css"
+import "../App.css";
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -34,46 +33,40 @@ class NameForm extends React.Component {
 
   render() {
     return (
-      <Container maxWidth="lg" align="center">
-        <b>Enter your name:</b> <br />
-        <input
-          className="name-input"
-          type="text"
-          value={this.state.sendername}
-          onChange={(event) => {
-            this._updateField("sendername", event.target.value);
-          }}
-        />
-        <br />
-        <br />
-        <b>Enter your friend or significant others name:</b> <br />
-        <input
-          className="name-input"
-          type="text"
-          value={this.state.username}
-          onChange={(event) => {
-            this._updateField("username", event.target.value);
-          }}
-        />
-        <br />
-        <br />
+      <div className="main-content">
+        <div className="name-form">
+          <b>Enter your name:</b>
+          <input
+            className="name-input"
+            type="text"
+            value={this.state.sendername}
+            onChange={(event) => {
+              this._updateField("sendername", event.target.value);
+            }}
+          />
+        </div>
+        <div className="name-form">
+          <b>Enter your friend or significant others name:</b> <br />
+          <input
+            className="name-input"
+            type="text"
+            value={this.state.username}
+            onChange={(event) => {
+              this._updateField("username", event.target.value);
+            }}
+          />
+        </div>
         <Button variant="outlined" size="large" onClick={this.generateLink}>
           Get Link
         </Button>
-        <br />
-        <br />
         <div>
-          <Typography variant="subtitle1">
-            <b>Send this link to the person that you think is mad at you:</b>
-          </Typography>
+          Send this link to the person that you think is mad at you:
           <br />
           <a href={this.state.link}>{this.state.link}</a>
         </div>
-        <br />
-        <br />
-        <br />
-      </Container>
+      </div>
     );
   }
 }
+
 export default NameForm;

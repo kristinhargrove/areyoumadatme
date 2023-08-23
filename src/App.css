@@ -2,8 +2,9 @@
   background-color: #ede7de;
   color: #025a4e;
   text-align: center;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1.0rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  height: 100vh;
 }
 
 .main-content {
@@ -23,7 +24,7 @@
 }
 
 h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 6rem;
   font-weight: 300;
   margin: 0;
@@ -47,8 +48,8 @@ h6 {
 }
 
 a {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.0rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
   padding: 0.5rem;
   color: #025a4e;
 }
@@ -62,10 +63,6 @@ a:hover {
   color: hotpink;
 }
 
-
-
-
-
 /* Name Form */
 
 .name-input {
@@ -73,10 +70,14 @@ a:hover {
   width: 13rem;
   text-align: center;
   font-size: 1.2rem;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   border-style: dotted;
   /* border-color:hsl(from pink h s l); */
-  margin: auto;
+  margin: 1rem;
+}
+
+.name-form {
+  margin: 2rem;
 }
 
 /* About */
