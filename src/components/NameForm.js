@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+// import Button from "@material-ui/core/Button";
 
 import "../App.css";
 
@@ -56,9 +55,12 @@ class NameForm extends React.Component {
             }}
           />
         </div>
-        <Button variant="outlined" size="large" onClick={this.generateLink}>
+        {/* <Button variant="outlined" size="large" onClick={this.generateLink}>
           Get Link
-        </Button>
+        </Button> */}
+        <button className="button" onClick={this.generateLink}>
+            Get Link
+        </button>
         <div>
           Send this link to the person that you think is mad at you:
           <br />
