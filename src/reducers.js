@@ -14,11 +14,10 @@ export function counter(state, action) {
             return {
                 ...state, count: state.count + 1
             }
-        case DECREMENT: {
+        case DECREMENT: 
             return {
                 ...state, count: state.count - 1
             }
-        }
         default:
             return state;
     }
