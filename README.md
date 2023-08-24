@@ -14,7 +14,6 @@ A fun way to figure out if the person who you think is mad at you is actually ma
 ## Technologies
 
 - [React](https://reactjs.org/)
-- [React-Redux](https://react-redux.js.org/)
 - [Material-UI] (https://material-ui.com/)
 
 ## Additional resources
