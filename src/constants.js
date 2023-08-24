@@ -10,12 +10,12 @@ export const jsQuiz = {
     {
       "id": 1,
       "question":
-        "Which of the following is used in React.js to increase performance?",
+        "Are you mad at me because I described you as 'cottage cheese'?",
       "choices": [
-        "Virtual DOM",
-        "Original DOM",
-        "Both A and B",
-        "None of the above",
+        "Yes",
+        "No",
+        // "Both A and B",
+        // "None of the above",
       ],
       "type": "MCQs",
       "correctAnswer": "Virtual DOM",
@@ -61,3 +61,9 @@ export const jsQuiz = {
     },
   ],
 };
+
+export const resultInitialState = {
+  score: 0,
+  yesAnswers: 0,
+  noAnswers: 0,
+}

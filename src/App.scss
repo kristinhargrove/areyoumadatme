@@ -1,7 +1,7 @@
 html, body, #root {
   height: 100%;
   background-color: #ede7de;
-
+  margin: auto;
 }
 
 .App {
@@ -135,6 +135,29 @@ a:hover {
       color: #025a4e;
       border: 1px dotted hotpink;
 
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    background-color: white;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #025a4e;
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+
+    &:disabled {
+      color: #9c9c9c;
+      background-color: #e7e8e9;
+      cursor: not-allowed;
     }
   }
 }
