@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import "../App.css";
+import "../App.scss";
 
 import Kristin from "../images/kristin.jpg";
 import InstagramIcon from "../images/instagram-icon.png";

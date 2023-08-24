@@ -1,7 +1,7 @@
 import React from "react";
 // import Button from "@material-ui/core/Button";
 
-import "../App.css";
+import "../App.scss";
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class NameForm extends React.Component {
           Get Link
         </Button> */}
         <button className="button" onClick={this.generateLink}>
-            Get Link
+          Get Link
         </button>
         <div>
           Send this link to the person that you think is mad at you:

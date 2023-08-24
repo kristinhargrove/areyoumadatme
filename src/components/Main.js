@@ -1,8 +1,11 @@
 import React from "react";
 import NameForm from "./NameForm";
+import Quiz from "../Quiz";
+
+import { jsQuiz } from "../constants";
 
 import "./Main.css";
-import "../App.css";
+import "../App.scss";
 
 class Main extends React.Component {
   componentDidMount() {
@@ -36,6 +39,7 @@ class Main extends React.Component {
         {/* <Link to='/quiz'><Button variant="outlined" size='large'>Start</Button></Link>
                     <br /><br /> */}
         <NameForm />
+        <Quiz questions={jsQuiz.questions}/>
       </div>
     );
   }
