@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { resultInitialState } from "./constants";
+import yuno_guy from "./images/y-u-no-guy.jpg";
+import happy_dog from "./images/happy_dog.png";
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -10,14 +12,27 @@ const Quiz = ({ questions }) => {
 
   const { question, choices, correctAnswer } = questions[currentQuestion];
 
+  console.log(answer);
+  console.log(results);
   const onAnswerClick = (answer, index) => {
     setAnswerIdx(index);
     if (answer === correctAnswer) {
+      //changed from correctAnswer to true
       setAnswer(true);
     } else {
       setAnswer(false);
     }
   };
+
+  //   const onAnswerClick = (answer, index) => {
+  //     setAnswerIdx(index);
+  //     if (answer === "Yes") {
+  //       //changed from correctAnswer to true
+  //       setAnswer(true);
+  //     } else {
+  //       setAnswer(false);
+  //     }
+  //   };
 
   const onClickNext = () => {
     setAnswerIdx(null);
@@ -34,7 +49,7 @@ const Quiz = ({ questions }) => {
           }
     );
     if (currentQuestion !== questions.length - 1) {
-      setCurrentQuestion((prev) => prev + 1);
+      setCurrentQuestion(currentQuestion + 1);
     } else {
       setCurrentQuestion(0);
       setShowResult(true);
@@ -49,6 +64,14 @@ const Quiz = ({ questions }) => {
           <span className="total-questions">/{questions.length}</span>
           <h2>{question}</h2>
           <ul>
+            {/* <li
+              key={answer}
+              onClick={(answer) => onAnswerClick(answer)}
+            //   className={answerIdx === index ? "selected-answer" : null}
+            >
+              Yes
+            </li> */}
+            {/* <li key={no}>No</li> */}
             {choices.map((answer, index) => (
               <li
                 onClick={() => onAnswerClick(answer, index)}
@@ -68,6 +91,34 @@ const Quiz = ({ questions }) => {
       ) : (
         <div className="result">
           <h3>Result</h3>
+          <p>
+            Score: <span>{results.score}</span>
+          </p>
+          {/* <p>
+            Yes Answers: <span>{results.yesAnswers}</span>
+          </p>
+          <p>
+            No Answers: <span>{results.noAnswers}</span>
+          </p> */}
+
+          {results.yesAnswers > results.noAnswers ? (
+            <>
+              <img src={yuno_guy} alt="y-u-no-guy" />
+              <p>
+                Wow, you're really mad at me. I'm sorry. Can I take you to
+                dinner?
+              </p>
+            </>
+          ) : (
+            <>
+            <img src={happy_dog} alt="happy-dog" />
+              <p>
+
+                Wow, you're not mad at me. Phew!! Can I take you to dinner
+                anyway?
+              </p>
+            </>
+          )}
         </div>
       )}
     </div>

@@ -18,46 +18,36 @@ export const jsQuiz = {
         // "None of the above",
       ],
       "type": "MCQs",
-      "correctAnswer": "Virtual DOM",
+      "correctAnswer": "Yes",
     },
     {
       "id": 2,
-      "question": "What is ReactJS?",
-      "choices": [
-        "Server-side framework",
-        "User Interface framework",
-        "both a and b",
-        "None of the above",
-      ],
+      "question": "Are you mad at me because I didn't do the dishes?",
+      "choices": ["Yes", "No"],
       "type": "MCQs",
-      "correctAnswer": "User Interface framework",
+      "correctAnswer": "Yes",
     },
     {
       "id": 3,
       "question":
-        "Identify the one which is used to pass data to components from outside",
-      "choices": ["Render with arguments", "setState", "PropTypes", "props"],
+        "Are you mad at me for because I said your foot injury was 'cute'?",
+      "choices": ["Yes", "No"],
       "type": "MCQs",
-      "correctAnswer": "props",
+      "correctAnswer": "Yes",
     },
     {
       "id": 4,
-      "question": "In which language is React.js written?",
-      "choices": ["Python", "Java", "C#", "JavaScript"],
+      "question": "Are you mad at me because I didn't buy you a Tesla?",
+      "choices": ["Yes", "No"],
       "type": "MCQs",
-      "correctAnswer": "JavaScript",
+      "correctAnswer": "Yes",
     },
     {
       "id": 5,
-      "question": "What is Babel?",
-      "choices": [
-        "JavaScript interpreter",
-        "JavaScript transpiler",
-        "JavaScript compiler",
-        "None of the above",
-      ],
+      "question": "Are you mad at me for ruining your surprise party, again?",
+      "choices": ["Yes", "No"],
       "type": "MCQs",
-      "correctAnswer": "JavaScript compiler",
+      "correctAnswer": "Yes",
     },
   ],
 };
@@ -66,4 +56,9 @@ export const resultInitialState = {
   score: 0,
   yesAnswers: 0,
   noAnswers: 0,
-}
+};
+
+export const yesOrNo = {
+  yes: "Yes",
+  no: "No",
+};
