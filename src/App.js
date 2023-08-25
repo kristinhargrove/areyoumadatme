@@ -9,44 +9,35 @@ import WelcomePage from "./components/WelcomePage";
 import FriendQuestions from "./containers/FriendQuestions";
 import Results from "./containers/Results";
 import Quiz from "./Quiz";
+import TakeQuiz from "./components/TakeQuiz";
 
-// import { Provider } from "react-redux";
-// import { store } from "./store"; //don't need redux
-import { createBrowserRouter, BrowserRouter, Switch, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Provider store={store}>
-          <CssBaseline /> */}
-      <Nav />
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Main />
+    <BrowserRouter>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<Main />}>
+            {/* <Main /> */}
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/welcomepage/:username/:sendername">
-            <WelcomePage />
-          </Route>
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-          <Route path="/friendquiz">
-            <FriendQuestions />
-          </Route>
-          <Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route
+            path="/welcomepage/:username/:sendername"
+            element={<WelcomePage />}
+          ></Route>
+          <Route path="/quiz" element={<TakeQuiz />}></Route>
+          <Route path="/friendquiz" element={<FriendQuestions />}></Route>
+          {/* <Route>
             <Results path="/results" />
-          </Route>
-          <Route path="*">
+          </Route> */}
+          {/* <Route path="*">
             <Navigate to="/" />
-          </Route>
-        </Switch>
-        {/* </Provider> */}
-      </BrowserRouter>
-    </div>
+          </Route> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
