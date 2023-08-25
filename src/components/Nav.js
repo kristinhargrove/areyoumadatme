@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./Header.css";
+import "./Nav.css";
 import "../App.scss";
 import {
   createBrowserRouter,
   BrowserRouter,
-  Switch,
+  Routes,
   Route,
   Navigate,
   Link,

@@ -7,7 +7,6 @@ import { jsQuiz } from "../constants";
 import "./Main.css";
 import "../App.scss";
 
-
 class Main extends React.Component {
   componentDidMount() {
     // api request for fun image or quote
@@ -40,7 +39,6 @@ class Main extends React.Component {
         {/* <Link to='/quiz'><Button variant="outlined" size='large'>Start</Button></Link>
                     <br /><br /> */}
         <NameForm />
-        <Quiz questions={jsQuiz.questions}/>
       </div>
     );
   }
