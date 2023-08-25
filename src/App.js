@@ -1,55 +1,51 @@
-import CssBaseline from "@material-ui/core/CssBaseline";
-import "./App.scss"; 
+// import CssBaseline from "@material-ui/core/CssBaseline";
+import "./App.scss";
 
-import Header from "./components/Header";
+import Nav from "./components/Nav";
 import Main from "./components/Main";
 import About from "./components/About";
 import WelcomePage from "./components/WelcomePage";
-import Question from "./containers/Question";
+// import Question from "./containers/Question";
 import FriendQuestions from "./containers/FriendQuestions";
 import Results from "./containers/Results";
+import Quiz from "./Quiz";
 
-import { Provider } from "react-redux";
-import { store } from "./store";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+// import { Provider } from "react-redux";
+// import { store } from "./store"; //don't need redux
+import { createBrowserRouter, BrowserRouter, Switch, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Provider store={store}>
-          <CssBaseline />
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <Main />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/welcomepage/:username/:sendername">
-              <WelcomePage />
-            </Route>
-            <Route path="/quiz">
-              <Question />
-            </Route>
-            <Route path="/friendquiz">
-              <FriendQuestions />
-            </Route>
-            <Route>
-              <Results path="/results" />
-            </Route>
-            <Route path="*">
-              <Redirect to="/" />
-            </Route>
-          </Switch>
-        </Provider>
-      </Router>
+      {/* <Provider store={store}>
+          <CssBaseline /> */}
+      <Nav />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/welcomepage/:username/:sendername">
+            <WelcomePage />
+          </Route>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+          <Route path="/friendquiz">
+            <FriendQuestions />
+          </Route>
+          <Route>
+            <Results path="/results" />
+          </Route>
+          <Route path="*">
+            <Navigate to="/" />
+          </Route>
+        </Switch>
+        {/* </Provider> */}
+      </BrowserRouter>
     </div>
   );
 }

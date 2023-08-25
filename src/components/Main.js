@@ -7,6 +7,7 @@ import { jsQuiz } from "../constants";
 import "./Main.css";
 import "../App.scss";
 
+
 class Main extends React.Component {
   componentDidMount() {
     // api request for fun image or quote
