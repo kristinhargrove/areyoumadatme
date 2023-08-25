@@ -7,41 +7,46 @@ import About from "./components/About";
 import WelcomePage from "./components/WelcomePage";
 // import Question from "./containers/Question";
 import FriendQuestions from "./containers/FriendQuestions";
-import TakeQuiz from "./components/TakeQuiz";
+import Results from "./containers/Results";
+import Quiz from "./Quiz";
 
-import {
-  createBrowserRouter,
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+// import { Provider } from "react-redux";
+// import { store } from "./store"; //don't need redux
+import { createBrowserRouter, BrowserRouter, Switch, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="wrapper">
-        <Nav />
-        <Routes>
-          <Route exact path="/" element={<Main />}>
-            {/* <Main /> */}
+    <div className="App">
+      {/* <Provider store={store}>
+          <CssBaseline /> */}
+      <Nav />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Main />
           </Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route
-            path="/welcomepage/:username/:sendername"
-            element={<WelcomePage />}
-          ></Route>
-          <Route path="/quiz" element={<TakeQuiz />}></Route>
-          <Route path="/friendquiz" element={<FriendQuestions />}></Route>
-          {/* <Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/welcomepage/:username/:sendername">
+            <WelcomePage />
+          </Route>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+          <Route path="/friendquiz">
+            <FriendQuestions />
+          </Route>
+          <Route>
             <Results path="/results" />
-          </Route> */}
-          {/* <Route path="*">
+          </Route>
+          <Route path="*">
             <Navigate to="/" />
-          </Route> */}
-        </Routes>
-      </div>
-    </BrowserRouter>
+          </Route>
+        </Switch>
+        {/* </Provider> */}
+      </BrowserRouter>
+    </div>
   );
 }
 

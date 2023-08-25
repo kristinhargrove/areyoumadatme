@@ -1,23 +1,30 @@
 import React from "react";
 
-import "./Nav.css";
+import "./Header.css";
 import "../App.scss";
-import { Link } from "react-router-dom";
+import {
+  createBrowserRouter,
+  BrowserRouter,
+  Switch,
+  Route,
+  Navigate,
+  Link,
+} from "react-router-dom";
 
-export default function Nav() {
-  return (
-    <nav>
-      <Link color="inherit" to="/">
-        home
-      </Link>
-      /
-      <Link color="inherit" to="/about">
-        about
-      </Link>
-      /
-      <Link color="textPrimary" to="/quiz">
-        quiz
-      </Link>
-    </nav>
-  );
-}
+const Nav = () => (
+  <nav>
+    <Link color="inherit" to="/">
+      home
+    </Link>
+    /
+    <Link color="inherit" to="/about">
+      about
+    </Link>
+    /
+    <Link color="textPrimary" to="/quiz">
+      quiz
+    </Link>
+  </nav>
+);
+
+export default Nav;
