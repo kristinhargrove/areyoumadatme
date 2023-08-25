@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   background-color: #ede7de;
   margin: auto;
@@ -114,8 +116,6 @@ a:hover {
 /* Quiz.js */
 
 .quiz-container {
-  margin: 2rem;
-
   ul {
     list-style-type: none;
     margin-top: 20px;
@@ -124,7 +124,7 @@ a:hover {
       text-decoration: none;
       list-style: none;
       color: #ede7de;
-      background-color:#025a4e;
+      background-color: #025a4e;
       font-style: 16px;
       border: 1px solid;
       border-radius: 16px;
@@ -137,7 +137,6 @@ a:hover {
       background: white;
       color: #025a4e;
       border: 1px dotted hotpink;
-
     }
   }
 
@@ -162,5 +161,9 @@ a:hover {
       background-color: #e7e8e9;
       cursor: not-allowed;
     }
+  }
+
+  .result {
+    width: 100%;
   }
 }
