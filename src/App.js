@@ -7,8 +7,6 @@ import About from "./components/About";
 import WelcomePage from "./components/WelcomePage";
 // import Question from "./containers/Question";
 import FriendQuestions from "./containers/FriendQuestions";
-import Results from "./containers/Results";
-import Quiz from "./Quiz";
 import TakeQuiz from "./components/TakeQuiz";
 
 import {
@@ -22,7 +20,7 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="wrapper">
         <Nav />
         <Routes>
           <Route exact path="/" element={<Main />}>
