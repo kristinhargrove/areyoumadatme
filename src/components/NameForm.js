@@ -7,7 +7,7 @@ export default function NameForm() {
   const [friendName, setFriendName] = useState("");
   const [customLink, setCustomLink] = useState("");
 
-  const link = `https://areyoumad.netlify.app/welcomePage`;
+  const link = `https://areyoumad.netlify.app/welcomepage`;
 
   const onButtonClick = (name, friendName) => {
     if (name && friendName) {
