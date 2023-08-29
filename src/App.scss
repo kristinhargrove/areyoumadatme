@@ -116,6 +116,14 @@ a:hover {
 /* Quiz.js */
 
 .quiz-container {
+  width: 75%;
+  margin: 25px auto;
+
+  .quiz-question {
+    margin-bottom: 40px;
+   
+  }
+
   ul {
     list-style-type: none;
     margin-top: 20px;

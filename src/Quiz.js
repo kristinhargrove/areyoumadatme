@@ -62,7 +62,8 @@ const Quiz = ({ questions }) => {
         <>
           <span className="active-question-no">{currentQuestion + 1}</span>
           <span className="total-questions">/{questions.length}</span>
-          <h2>{question}</h2>
+
+          <h2 className="quiz-question">{question}</h2>
           <ul>
             {/* <li
               key={answer}
@@ -111,9 +112,8 @@ const Quiz = ({ questions }) => {
             </>
           ) : (
             <>
-            <img src={happy_dog} alt="happy-dog" />
+              <img src={happy_dog} alt="happy-dog" />
               <p>
-
                 Wow, you're not mad at me. Phew!! Can I take you to dinner
                 anyway?
               </p>
