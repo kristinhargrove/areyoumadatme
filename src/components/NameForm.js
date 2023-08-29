@@ -1,74 +1,54 @@
-import React from "react";
-// import Button from "@material-ui/core/Button";
+import { useState } from "react";
 
 import "../App.scss";
 
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      sendername: "",
-      link: "https://areyoumad.netlify.app/welcomepage",
-    };
-  }
+export default function NameForm() {
+  const [name, setName] = useState("");
+  const [friendName, setFriendName] = useState("");
+  const [customLink, setCustomLink] = useState("");
 
-  _updateField = (field, val) => {
-    this.setState({
-      [field]: val,
-    });
+  const link = `https://areyoumad.netlify.app/welcomepage`;
+
+  const onButtonClick = (name, friendName) => {
+    if (name && friendName) {
+      setCustomLink(link + "/" + name + "/" + friendName);
+    } else {
+      alert("Please enter your name and your friend's name");
+    }
   };
 
-  generateLink = () => {
-    this.setState({
-      link:
-        this.state.link +
-        "/" +
-        this.state.username +
-        "/" +
-        this.state.sendername,
-    });
-  };
-
-  render() {
-    return (
-      <div className="main-content">
-        <div className="name-form">
-          <b>Enter your name:</b>
-          <input
-            className="name-input"
-            type="text"
-            value={this.state.sendername}
-            onChange={(event) => {
-              this._updateField("sendername", event.target.value);
-            }}
-          />
-        </div>
-        <div className="name-form">
-          <b>Enter your friend or significant others name:</b> <br />
-          <input
-            className="name-input"
-            type="text"
-            value={this.state.username}
-            onChange={(event) => {
-              this._updateField("username", event.target.value);
-            }}
-          />
-        </div>
-        {/* <Button variant="outlined" size="large" onClick={this.generateLink}>
-          Get Link
-        </Button> */}
-        <button className="button" onClick={this.generateLink}>
-          Get Link
-        </button>
-        <div>
-          Send this link to the person that you think is mad at you:
-          <br />
-          <a href={this.state.link}>{this.state.link}</a>
-        </div>
+  console.log(`this is name` + name);
+  console.log("this is friendName" + friendName);
+  return (
+    <div className="main-content">
+      <div className="name-form">
+        <b>Enter your name:</b>
+        <input
+          className="name-input"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
-    );
-  }
+      <div className="name-form">
+        <b>Enter your friend's name:</b>
+        <input
+          className="name-input"
+          type="text"
+          value={friendName}
+          onChange={(e) => setFriendName(e.target.value)}
+        />
+      </div>
+      <button
+        className="button"
+        onClick={() => onButtonClick(name, friendName)}
+      >
+        Get Link
+      </button>
+      <div className="custom-link">
+        <b>Custom Link:</b>
+        {customLink}
+      </div>
+    </div>
+  );
 }
-
-export default NameForm;
