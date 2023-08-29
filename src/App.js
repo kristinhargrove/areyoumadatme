@@ -24,7 +24,7 @@ function App() {
           </Route>
           <Route path="/about" element={<About />}></Route>
           <Route
-            path="/welcomepage/:username/:sendername"
+            path="welcomepage/:friendName/:name"
             element={<WelcomePage />}
           ></Route>
           <Route path="/quiz" element={<TakeQuiz />}></Route>
