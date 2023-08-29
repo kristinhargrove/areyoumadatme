@@ -12,8 +12,6 @@ const Quiz = ({ questions }) => {
 
   const { question, choices, correctAnswer } = questions[currentQuestion];
 
-  console.log(answer);
-  console.log(results);
   const onAnswerClick = (answer, index) => {
     setAnswerIdx(index);
     if (answer === correctAnswer) {
